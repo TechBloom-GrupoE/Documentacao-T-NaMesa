@@ -1,0 +1,180 @@
+type: collection.insomnia.rest/5.0
+name: TaNaMesa - Spring
+meta:
+  id: wrk_ed1887fee9bf48bb8d9e33ca1dd20000
+  created: 1760618839516
+  modified: 1760618839516
+  description: ""
+collection:
+  - name: Produto
+    meta:
+      id: fld_96155f5442b543bca2c9dac287b22ee7
+      created: 1760618852727
+      modified: 1760618852727
+      sortKey: -1760618852727
+      description: ""
+    children:
+      - url: http://localhost:8080/produtos
+        name: Listar todos
+        meta:
+          id: req_10354d2e28d64e118cc4a40ec75c9a2f
+          created: 1760618874635
+          modified: 1760620126830
+          isPrivate: false
+          description: ""
+          sortKey: -1760618874635
+        method: GET
+        headers:
+          - name: User-Agent
+            value: insomnia/11.6.1
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: http://localhost:8080/produtos/2
+        name: Procurar por ID
+        meta:
+          id: req_9c43f3d0a2124ccc84320c16fe13c069
+          created: 1760618930402
+          modified: 1760627574947
+          isPrivate: false
+          description: ""
+          sortKey: -1760618874535
+        method: GET
+        headers:
+          - name: User-Agent
+            value: insomnia/11.6.1
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: http://localhost:8080/produtos/nome/FILE
+        name: Procurar por Nome
+        meta:
+          id: req_774e84cfac064472b9bfa536e8eaeb8f
+          created: 1760618983896
+          modified: 1760625421462
+          isPrivate: false
+          description: ""
+          sortKey: -1760618874435
+        method: GET
+        headers:
+          - name: User-Agent
+            value: insomnia/11.6.1
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: http://localhost:8080/produtos
+        name: Criar Produto
+        meta:
+          id: req_fa2075fc088345568555521b9713cd8b
+          created: 1760619068050
+          modified: 1760627531112
+          isPrivate: false
+          description: ""
+          sortKey: -1760619068050
+        method: POST
+        body:
+          mimeType: application/json
+          text: >-
+            {
+            	"nome": "Strogonoff",
+            	"descricao": "Strogonoff de frango",
+            	"foto": "https://ik.imagekit.io/techbloom/Strogonoff.jpg?updatedAt=1760622855125",
+            	"categoria": "Almoço",
+            	"preco": 30.00
+            }
+        headers:
+          - name: Content-Type
+            value: application/json
+          - name: User-Agent
+            value: insomnia/11.6.1
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: http://localhost:8080/produtos
+        name: Atualizar Produto
+        meta:
+          id: req_2c6c97c336854a4e8e57ec2cec9e41f5
+          created: 1760619134296
+          modified: 1760627657219
+          isPrivate: false
+          description: ""
+          sortKey: -1760619134296
+        method: PUT
+        body:
+          mimeType: application/json
+          text: >-
+            {
+            	"id": 3,
+            	"nome": "Salada Completa",
+            	"descricao": "Saladinha ",
+            	"foto": "https://ik.imagekit.io/techbloom/Salada%20Completa.jpg?updatedAt=1760622188496",
+            	"categoria": "Saudavel",
+            	"preco": 20.00
+            }
+        headers:
+          - name: Content-Type
+            value: application/json
+          - name: User-Agent
+            value: insomnia/11.6.1
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: http://localhost:8080/produtos/2
+        name: Deletar Produto
+        meta:
+          id: req_43a6ab6036144cd9891b11285efad649
+          created: 1760619220656
+          modified: 1760627693404
+          isPrivate: false
+          description: ""
+          sortKey: -1760619220656
+        method: DELETE
+        headers:
+          - name: User-Agent
+            value: insomnia/11.6.1
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+cookieJar:
+  name: Default Jar
+  meta:
+    id: jar_2f009728ea57dfd06865ce0f929fa8c5a9e586b5
+    created: 1760618839521
+    modified: 1760618839521
+environments:
+  name: Base Environment
+  meta:
+    id: env_2f009728ea57dfd06865ce0f929fa8c5a9e586b5
+    created: 1760618839519
+    modified: 1760618839519
+    isPrivate: false
